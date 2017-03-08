@@ -34,7 +34,7 @@ public class UserService {
        return userDao.findById(id);
     }
 
-    public Users verifyLogin(String email, String senha) {
-        return userDao.verifyLogin(email, senha);
+    public Users verifyLogin(String email, String password) {
+        return userDao.verifyLogin(email, password);
     }
 }

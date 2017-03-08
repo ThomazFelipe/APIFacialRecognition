@@ -19,7 +19,6 @@ import APIFacial.service.UserService;
 
 @Controller
 @RestController
-@RequestMapping(value = "/user")
 public class UserController {
 
     @Autowired
@@ -35,14 +34,14 @@ public class UserController {
         userService.update(user);
     }
 
-    @RequestMapping(value = "deleteAccount/{id}", method = RequestMethod.PUT)
+    @RequestMapping(value = "/deleteAccount/{id}", method = RequestMethod.PUT)
     public void deleteAccount(@PathVariable("id") Integer id) {
         userService.deleteAccount(id);
     }
 
-    @RequestMapping(value = "login/{email}/{senha}", method = RequestMethod.POST)
-    public Users verifyLogin(@PathVariable("email") String email, @PathVariable("senha") String senha) {
+    @RequestMapping(value = "/login/{email}/{password}", method = RequestMethod.POST)
+    public Users verifyLogin(@PathVariable("email") String email, @PathVariable("password") String password) {
 
-        return userService.verifyLogin(email, senha);
+        return userService.verifyLogin(email, password);
     }
 }
