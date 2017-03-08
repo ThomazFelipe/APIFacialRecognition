@@ -19,9 +19,9 @@ public class Users {
     private String password;
 
     public Users(){
-    	
-    }
-    
+
+	}
+
 	public Users(Integer id, String email, String password) {
 		super();
 		this.id = id;

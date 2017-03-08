@@ -43,7 +43,7 @@ public class UserDao {
     }
 
     public Users verifyLogin(String email, String password) {
-        final String SELECT = "SELECT u FROM Users u WHERE u.email=:emailurl AND u.senha=:senhaurl";
+        final String SELECT = "SELECT u FROM Users u WHERE u.email=:emailurl AND u.password=:senhaurl";
 
         javax.persistence.Query query = manager.createQuery(SELECT);
         query.setParameter("emailurl", email);
