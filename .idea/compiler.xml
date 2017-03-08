@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-facial-recognition" />
+        <module name="APIFacial" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="api-facial-recognition" target="1.8" />
+      <module name="APIFacial" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
