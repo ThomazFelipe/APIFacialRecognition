@@ -1,9 +1,6 @@
 package APIFacial.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by thomaz on 03/03/17.
@@ -15,6 +12,7 @@ public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+	@Column(unique = true)
     private String email;
     private String password;
 
