@@ -37,15 +37,13 @@ public class UserDao {
         manager.merge(user);
     }
 
-
     public Users findById(Integer id) {
         return manager.find(Users.class, id);
     }
 
     public Users verifyLogin(String email, String password) {
-        final String SELECT = "SELECT u FROM Users u WHERE u.email=:emailurl AND u.password=:senhaurl";
-
-        javax.persistence.Query query = manager.createQuery(SELECT);
+        javax.persistence.Query query = manager.createQuery("SELECT u FROM Users u " +
+                "WHERE u.email=:emailurl AND u.password=:senhaurl");
         query.setParameter("emailurl", email);
         query.setParameter("senhaurl", password);
 

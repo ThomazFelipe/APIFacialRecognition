@@ -15,18 +15,19 @@ public class Users {
 	@Column(unique = true)
     private String email;
     private String password;
+	@Lob
+	@Column(nullable=false, columnDefinition="mediumblob")
+	private Byte[] image;
 
-    public Users(){
+    public Users(){	}
 
-	}
-
-	public Users(Integer id, String email, String password) {
+	public Users(Integer id, String email, String password, Byte [] image) {
 		super();
 		this.id = id;
 		this.email = email;
 		this.password = password;
+		this.image = image;
 	}
-
 
 	public Integer getId() {
 		return id;
@@ -51,6 +52,12 @@ public class Users {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-    
-    
+
+	public Byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(Byte[] image) {
+		this.image = image;
+	}
 }

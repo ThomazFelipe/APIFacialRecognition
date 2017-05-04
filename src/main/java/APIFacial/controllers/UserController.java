@@ -44,4 +44,9 @@ public class UserController {
 
         return userService.verifyLogin(email, password);
     }
+
+    @RequestMapping(value = "/image/{id}", method = RequestMethod.GET)
+    public Users getPicture(@PathVariable("id") Integer id){
+        return userService.findById(id);
+    }
 }
